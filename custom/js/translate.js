@@ -12,8 +12,8 @@ Domotica.translate = {
 		switch(Domotica.settings.domoticz.langage){
 			case "en":
 				return Domotica.translate.en
-			case "du":
-				return Domotica.translate.du
+			case "nl":
+				return Domotica.translate.nl
 			case "fr":
 				return Domotica.translate.fr
 			default:
