@@ -82,7 +82,7 @@ Domotica = {
 					// Add icon
 					$(el).prepend(
 						$("<span>" ).addClass( "info-box-icon" )
-							.append( $( "<i>" ).addClass( "fa fa-server-o") )
+							.append( $( "<i>" ).addClass( "fa fa-server") )
 					);
 
 					// Add content itself. Title is given in an element with class title, or in a data-attribute
