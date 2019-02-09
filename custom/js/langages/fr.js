@@ -1,5 +1,6 @@
 Domotica.translate.fr = {
   // Général
+  "Devices Dashboard": "Tableau Matériels",
   "Home": "Maison",
   "Details": "Détails",
   "Domotica": "Domoticz",

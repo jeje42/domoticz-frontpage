@@ -1,5 +1,6 @@
 Domotica.translate.en = {
   // Général
+  "Devices Dashboard": "Devices Dashboard",
   "Home": "Home",
   "Details": "Details",
   "Domotica": "Domotica",
