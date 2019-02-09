@@ -17,6 +17,8 @@ Domotica.settings = {
 		// This roomplan should contain all devices to
 		// be updated on the dashboard
 		plan: 2,
+
+		//Available : nl, en, fr
 		langage: "en"
 	},
 	weather: {
