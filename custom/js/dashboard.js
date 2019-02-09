@@ -216,9 +216,11 @@ Domotica = {
 				});
 
 				var dimmerId = $(this).data("domoticz-id");
-				slider.on("slideStop", function(e) {
-					Domotica.domoticz.change.dimmerSwitch(dimmerId, e.value);
-				})
+				if(slider){
+					slider.on("slideStop", function(e) {
+						Domotica.domoticz.change.dimmerSwitch(dimmerId, e.value);
+					})
+				}
 			});
 
 			// Make sure changing the slider doesn't switch off the lights
