@@ -38,6 +38,7 @@ Domotica = {
 				this.switches();
 				this.dimmerSwitches();
 				this.heaters();
+				this.textes()
 			},
 			loadingOverlay: function(el) {
 				el.append(
@@ -46,6 +47,36 @@ Domotica = {
 				);
 
 			},
+
+			textes: function(){
+				$( ".text.default-ui").each(function(idx,el) {
+					// Add icon
+					$(el).prepend(
+						$("<span>" ).addClass( "info-box-icon" )
+							.append( $( "<i>" ).addClass( "fa fa-comments") )
+					);
+
+					// Add content itself. Title is given in an element with class title, or in a data-attribute
+					var title = $(el).find( ".title" );
+
+					if( title.length == 0 ) {
+						title = $( "<span>" ).text( $(el).data( "title" ) );
+					}
+
+					var content = $( "<div>" )
+						.addClass( "info-box-content" )
+						.append( title.addClass( "info-box-text" ) )
+						.append( $( "<span>" ).addClass( "info-box-number domoticz-status" ) )
+						.append( $( "<div>" ).addClass( "progress" ) )
+						.append( $( "<span>" ).addClass( "progress-description lastUpdate" ) )
+
+					$(el).append(content);
+
+					// Add overlay
+					Domotica.dashboard.defaultUI.loadingOverlay($(el));
+				});
+			},
+
 			switches: function() {
 				this.switchesJejeServeur()
 				this.switchesLights()

@@ -36,6 +36,8 @@ Domotica.domoticz = {
 					that.updateWidget.heater(element, result);
 				} else if(element.hasClass("temperature")) {
 					that.updateWidget.temperature(element, result);
+				} else if(element.hasClass("text")) {
+					that.updateWidget.text(element, result);
 				} else {
 					that.updateWidget.generic(element, result);
 				}
@@ -90,6 +92,14 @@ Domotica.domoticz = {
 	// Methods to update widgets on the screen, based on
 	// data from domoticz
 	updateWidget: {
+		text: function(element, result) {
+			// Update the status text
+			var status = Domotica.domoticz.translate(result.Status);
+			element.find(".domoticz-status" ).text(status);
+
+			// Also do generic updating
+			this.generic(element, result);
+		},
 		dimmerSwitch: function(element, result) {
 			// Update the slider to show the dimmer value
 			Domotica.ui.setSliderValue(element, result.Level);
