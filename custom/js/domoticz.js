@@ -94,7 +94,7 @@ Domotica.domoticz = {
 	updateWidget: {
 		text: function(element, result) {
 			// Update the status text
-			var status = Domotica.domoticz.translate(result.Status);
+			var status = Domotica.domoticz.translate(result.Data);
 			element.find(".domoticz-status" ).text(status);
 
 			// Also do generic updating
