@@ -14,8 +14,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<link href="plugins/bootstrap-slider/slider.css" rel="stylesheet" type="text/css">
 
     <!-- Font Awesome Icons -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
-    <link href="./vendors/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">     -->
+    <link href="./vendors/fontawesome-free-5.7.1-web/css/all.css" rel="stylesheet" type="text/css"/>
+
     <!-- Weather Icons -->
     <!--  <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css" rel="stylesheet" type="text/css" />  -->
     <link href="./vendors/weather-icons/css/weather-icons.min.css" rel="stylesheet" type="text/css" />
@@ -258,53 +259,73 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div><!-- /.col -->
 
             <div class="col col-md-2 col-sm-6 col-xs-12">
-              <div class="box info-box bg-green text default-ui" data-domoticz-id="47" data-status="false">
-                  <span class="title">RAM_Hote<span class="generic-description"></span></span>
+              <div class="box info-box bg-green text default-ui" data-domoticz-id="51" data-status="false">
+                  <span class="title">/_Cameras<span class="generic-description"></span></span>
+              </div><!-- /.info-box -->
+            </div><!-- /.col -->
+
+            <div class="col col-md-2 col-sm-6 col-xs-12">
+              <div class="box info-box bg-green text default-ui" data-domoticz-id="50" data-status="false">
+                  <span class="title">/_Videos<span class="generic-description"></span></span>
+              </div><!-- /.info-box -->
+            </div><!-- /.col -->
+
+            <div class="col col-md-2 col-sm-6 col-xs-12">
+              <div class="box info-box bg-green text default-ui" data-domoticz-id="49" data-status="false">
+                  <span class="title">/_Sandcats<span class="generic-description"></span></span>
+              </div><!-- /.info-box -->
+            </div><!-- /.col -->
+
+            <div class="col col-md-2 col-sm-6 col-xs-12">
+              <div class="box info-box bg-green text default-ui" data-domoticz-id="48" data-status="false">
+                  <span class="title">/_Fichiers<span class="generic-description"></span></span>
+              </div><!-- /.info-box -->
+            </div><!-- /.col -->
+
+            <div class="col col-md-2 col-sm-6 col-xs-12">
+              <div class="box info-box bg-green text default-ui" data-domoticz-id="54" data-status="false">
+                  <span class="title">DISK1<span class="generic-description"></span></span>
+              </div><!-- /.info-box -->
+            </div><!-- /.col -->
+
+            <div class="col col-md-2 col-sm-6 col-xs-12">
+              <div class="box info-box bg-green text default-ui" data-domoticz-id="55" data-status="false">
+                  <span class="title">DISK2<span class="generic-description"></span></span>
               </div><!-- /.info-box -->
             </div><!-- /.col -->
           </div>
 
-		  <!-- Second row with information -->
-		  <div class="row">
-			<div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="box info-box heater default-ui" data-domoticz-id="45" data-color="blue">
-                   <span class="title">Zijraam</span>
-			  </div><!-- /.info-box -->
-			</div>
-			<div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="box info-box heater default-ui" data-domoticz-id="60" data-color="yellow">
-                   <span class="title">Achterraam</span>
-			  </div><!-- /.info-box -->
-			</div>
-			<div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="box info-box heater default-ui" data-domoticz-id="206" data-color="green">
-                   <span class="title">Keuken</span>
-			  </div><!-- /.info-box -->
-			</div>
-			<div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="box info-box heater default-ui" data-domoticz-id="176" data-color="red">
-                   <span class="title">Virtueel</span>
-			  </div><!-- /.info-box -->
-			</div>
-		  </div>
-
-		  <!-- Second row with information -->
-		  <div class="row">
-			<div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="info-box sunscreen disabled" data-domoticz-id="62">
-                <span class="info-box-icon bg-green"><i class="wi wi-day-sunny"></i></span>
-                <div class="info-box-content">
-					<div class="btn-group-vertical pull-right updown-buttons">
-                      <button type="button" class="btn btn-default up"><i class="fa fa-chevron-up"></i></button>
-                      <button type="button" class="btn btn-default down"><i class="fa fa-chevron-down"></i></button>
-                    </div>
-
-                  <span class="info-box-text">Zonnescherm</span>
-                </div><!-- /.info-box-content -->
+          <div class="row">
+            <div class="col col-md-2 col-sm-6 col-xs-12">
+              <div class="box info-box bg-yellow text ram-ui" data-domoticz-id="47" data-status="false">
+                  <span class="title">RAM_Hote<span class="generic-description"></span></span>
               </div><!-- /.info-box -->
-			</div>
-		  </div>
+            </div><!-- /.col -->
 
+            <div class="col col-md-2 col-sm-6 col-xs-12">
+              <div class="box info-box bg-yellow text ram-ui" data-domoticz-id="46" data-status="false">
+                  <span class="title">RAM_Cameras<span class="generic-description"></span></span>
+              </div><!-- /.info-box -->
+            </div><!-- /.col -->
+
+            <div class="col col-md-2 col-sm-6 col-xs-12">
+              <div class="box info-box bg-yellow text ram-ui" data-domoticz-id="45" data-status="false">
+                  <span class="title">RAM_Videos<span class="generic-description"></span></span>
+              </div><!-- /.info-box -->
+            </div><!-- /.col -->
+
+            <div class="col col-md-2 col-sm-6 col-xs-12">
+              <div class="box info-box bg-yellow text ram-ui" data-domoticz-id="44" data-status="false">
+                  <span class="title">RAM_Sandcats<span class="generic-description"></span></span>
+              </div><!-- /.info-box -->
+            </div><!-- /.col -->
+
+            <div class="col col-md-2 col-sm-6 col-xs-12">
+              <div class="box info-box bg-yellow text ram-ui" data-domoticz-id="43" data-status="false">
+                  <span class="title">RAM_Fichiers<span class="generic-description"></span></span>
+              </div><!-- /.info-box -->
+            </div><!-- /.col -->
+          </div>
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
 
