@@ -37,6 +37,40 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link href="./custom/css/domotica.css" rel="stylesheet" type="text/css" />
     <link href="./custom/css/responsive.css" rel="stylesheet" type="text/css" />
 
+    <!-- REQUIRED JS SCRIPTS -->
+
+    <!-- jQuery 3.3.1 -->
+    <script src="plugins/jQuery/jQuery-3.3.1.min.js"></script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js" type="text/javascript"></script>
+
+    <!-- Morris.js charts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="plugins/morris/morris.min.js" type="text/javascript"></script>
+
+    <!-- ChartJS 1.0.1 -->
+    <script src="plugins/chartjs/Chart.min.js" type="text/javascript"></script>
+
+    <!--  Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment-with-locales.min.js" type="text/javascript"></script>
+
+    <!-- Optionally, you can add Slimscroll and FastClick plugins.
+          Both of these plugins are recommended to enhance the
+          user experience. Slimscroll is required when using the
+          fixed layout. -->
+    <script src="plugins/bootstrap-slider/bootstrap-slider.js" type="text/javascript"></script>
+
+    <!-- Scripts to enable dashboard to be interactive -->
+    <script src="custom/js/dashboard.js" type="text/javascript"></script>
+    <script src="custom/js/settings.js" type="text/javascript"></script>
+    <script src="custom/js/domoticz.js" type="text/javascript"></script>
+    <script src="custom/js/translate.js" type="text/javascript"></script>
+    <script src="custom/js/langages/fr.js" type="text/javascript"></script>
+    <script src="custom/js/langages/nl.js" type="text/javascript"></script>
+    <script src="custom/js/langages/en.js" type="text/javascript"></script>
+
   </head>
   <!--
   BODY TAG OPTIONS:
@@ -161,20 +195,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-          <!-- Sidebar Menu -->
-          <ul class="sidebar-menu">
-            <li><a href="index.html"><i class='fa fa-home'></i> <span class="translated">Home</span></a></li>
-            <li class="header translated" toTranslate="Details">Details</li>
-            <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="devices.html"><i class='fa fa-lightbulb-o'></i> <span class="translated">Domotica</span></a></li>
-            <li><a href="server.html"><i class='fa fa-server'></i> <span>Serveur</span></a></li>
-            <li><a href="weather.html"><i class='wi wi-horizon'></i> <span class="translated">Weer</span></a></li>
-            <!-- <li><a href="music.html"><i class='fa fa-music'></i> <span class="translated">Muziek</span></a></li> -->
-            <!-- <li><a href="entertainment.html"><i class='fa fa-film'></i> <span>TV</span></a></li> -->
-            <li class="config header spacer translated" toTranslate="Opties">Opties</li>
-            <li class="config"><a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i> <span class="translated">Configuratie</span></a></li>
-          </ul><!-- /.sidebar-menu -->
+          <div id="includedContent"></div>
         </section>
+
+        <script>
+          $(function(){
+            $("#includedContent").load("common/sidebarCommon.html");
+          });
+        </script>
         <!-- /.sidebar -->
       </aside>
 
@@ -400,40 +428,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
            immediately after the control sidebar -->
       <div class='control-sidebar-bg'></div>
     </div><!-- ./wrapper -->
-
-    <!-- REQUIRED JS SCRIPTS -->
-
-    <!-- jQuery 2.1.4 -->
-    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <!-- Bootstrap 3.3.2 JS -->
-    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <!-- AdminLTE App -->
-    <script src="dist/js/app.min.js" type="text/javascript"></script>
-
-    <!-- Morris.js charts -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="plugins/morris/morris.min.js" type="text/javascript"></script>
-
-	<!-- ChartJS 1.0.1 -->
-    <script src="plugins/chartjs/Chart.min.js" type="text/javascript"></script>
-
-    <!--  Moment.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment-with-locales.min.js" type="text/javascript"></script>
-
-    <!-- Optionally, you can add Slimscroll and FastClick plugins.
-          Both of these plugins are recommended to enhance the
-          user experience. Slimscroll is required when using the
-          fixed layout. -->
-	<script src="plugins/bootstrap-slider/bootstrap-slider.js" type="text/javascript"></script>
-
-	<!-- Scripts to enable dashboard to be interactive -->
-	<script src="custom/js/dashboard.js" type="text/javascript"></script>
-	<script src="custom/js/settings.js" type="text/javascript"></script>
-	<script src="custom/js/domoticz.js" type="text/javascript"></script>
-  <script src="custom/js/translate.js" type="text/javascript"></script>
-  <script src="custom/js/langages/fr.js" type="text/javascript"></script>
-  <script src="custom/js/langages/du.js" type="text/javascript"></script>
-  <script src="custom/js/langages/en.js" type="text/javascript"></script>
 
 	<script type="text/javascript">
 		$(function() { Domotica.dashboard.init(); });

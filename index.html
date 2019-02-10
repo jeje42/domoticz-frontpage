@@ -8,14 +8,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta charset="UTF-8">
     <title>Domotica Dashboard</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    
+
     <!-- Bootstrap 3.3.4 -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="plugins/bootstrap-slider/slider.css" rel="stylesheet" type="text/css">
-	    
+
     <!-- Font Awesome Icons -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
-    <link href="./vendors/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">     -->
+    <link href="./vendors/fontawesome-free-5.7.1-web/css/all.css" rel="stylesheet" type="text/css"/>
     <!-- Weather Icons -->
     <!--  <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css" rel="stylesheet" type="text/css" />  -->
     <link href="./vendors/weather-icons/css/weather-icons.min.css" rel="stylesheet" type="text/css" />
@@ -23,7 +23,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" /> -->
     <link href="./vendors/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 
-    
+
     <!-- Theme style -->
     <link href="dist/css/AdminLTE.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
@@ -31,13 +31,47 @@ scratch. This page gets rid of all links and provides the needed markup only.
           apply the skin class to the body tag so the changes take effect.
     -->
     <link href="dist/css/skins/skin-blue-light.min.css" rel="stylesheet" type="text/css" />
-    
+
     <!-- Custom css -->
     <link href="./custom/css/domotica.css" rel="stylesheet" type="text/css" />
     <link href="./custom/css/responsive.css" rel="stylesheet" type="text/css" />
-    
+
     <!-- Android app manifest -->
     <link rel="manifest" href="manifest.json">
+
+    <!-- REQUIRED JS SCRIPTS -->
+
+    <!-- jQuery 3.3.1 -->
+    <script src="plugins/jQuery/jQuery-3.3.1.min.js"></script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js" type="text/javascript"></script>
+
+    <!-- Morris.js charts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="plugins/morris/morris.min.js" type="text/javascript"></script>
+
+    <!-- ChartJS 1.0.1 -->
+    <script src="plugins/chartjs/Chart.min.js" type="text/javascript"></script>
+
+    <!--  Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment-with-locales.min.js" type="text/javascript"></script>
+
+    <!-- Optionally, you can add Slimscroll and FastClick plugins.
+          Both of these plugins are recommended to enhance the
+          user experience. Slimscroll is required when using the
+          fixed layout. -->
+    <script src="plugins/bootstrap-slider/bootstrap-slider.js" type="text/javascript"></script>
+
+    <!-- Scripts to enable dashboard to be interactive -->
+    <script src="custom/js/dashboard.js" type="text/javascript"></script>
+    <script src="custom/js/settings.js" type="text/javascript"></script>
+    <script src="custom/js/domoticz.js" type="text/javascript"></script>
+    <script src="custom/js/translate.js" type="text/javascript"></script>
+    <script src="custom/js/langages/fr.js" type="text/javascript"></script>
+    <script src="custom/js/langages/nl.js" type="text/javascript"></script>
+    <script src="custom/js/langages/en.js" type="text/javascript"></script>
   </head>
   <!--
   BODY TAG OPTIONS:
@@ -117,7 +151,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
               <!-- Notifications Menu: including battery level notifications -->
               <li class="dropdown notifications-menu">
-			  
+
               <!-- Menu toggle button -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-bell-o"></i>
@@ -138,7 +172,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <li class="footer"><a href="#">View all</a></li>
                 </ul>
               </li>
-              
+
 			  <!-- User Account Menu -->
               <li class="dropdown user user-menu">
                 <!-- Menu Toggle Button -->
@@ -162,20 +196,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-          <!-- Sidebar Menu -->
-          <ul class="sidebar-menu">
-            <li class="active"><a href="index.html"><i class='fa fa-home'></i> <span>Home</span></a></li>
-            <li class="header">Details</li>
-            <!-- Optionally, you can add icons to the links -->
-            <li><a href="devices.html"><i class='fa fa-lightbulb-o'></i> <span>Domotica</span></a></li>
-            <li><a href="weather.html"><i class='wi wi-horizon'></i> <span>Weer</span></a></li>
-            <li><a href="music.html"><i class='fa fa-music'></i> <span>Muziek</span></a></li>
-            <li><a href="entertainment.html"><i class='fa fa-film'></i> <span>TV</span></a></li>
-            <li class="config header spacer">Opties</li>
-            <li class="config"><a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i> <span>Configuratie</span></a></li>
-
-          </ul><!-- /.sidebar-menu -->
+          <div id="includedContent"></div>
         </section>
+
+        <script>
+          $(function(){
+            $("#includedContent").load("common/sidebarCommon.html");
+          });
+        </script>
         <!-- /.sidebar -->
       </aside>
 
@@ -196,7 +224,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	                <span class="title">eettafel<span class="generic-description"> lampen</span></span>
 				  </div><!-- /.info-box -->
 	            </div><!-- /.col -->
-	           
+
 	            <div class="col col-md-4 col-sm-4 col-xs-2">
 	              <div class="box info-box bg-yellow switch default-ui" data-domoticz-id="145" data-status="false">
 	                  <span class="title">bank<span class="generic-description"> lamp</span></span>
@@ -214,7 +242,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	            </div><!-- /.col -->
           	  </div>
 		  	</div>
-		  	
+
             <div class="col col-md-6 col-sm-12 col-xs-12 lights">
 			  <div class="row">
 
@@ -251,28 +279,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
 						<div class="btn-group-vertical pull-right updown-buttons hidden-xs">
 	                      <button type="button" class="btn btn-default up"><i class="fa fa-chevron-up"></i></button>
 	                      <button type="button" class="btn btn-default down"><i class="fa fa-chevron-down"></i></button>
-	                    </div>                  
-	                
+	                    </div>
+
 	                  <span class="info-box-text">Zonnescherm</span>
-	                  
+
 	                  	<div class="btn-group updown-buttons visible-xs">
 	                      <button type="button" class="btn btn-default up"><i class="fa fa-chevron-up"></i></button>
 	                      <button type="button" class="btn btn-default down"><i class="fa fa-chevron-down"></i></button>
 	                    </div>
-	                  
+
 	                </div><!-- /.info-box-content -->
 	              </div><!-- /.info-box -->
-				</div>              
- 			  
+				</div>
+
 		  		<div class="col col-md-6 col-sm-6 col-xs-6">
 	              <div class="box info-box heater default-ui" data-domoticz-id="176" data-color="blue">
                     <span class="title">Verwarming</span>
 				  </div><!-- /.info-box -->
               	</div>
-			  
+
           	  </div>
 		  	</div>
-		  	
+
 		  </div>
 
 		  <!-- Second row with scenes -->
@@ -283,7 +311,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 	<span class="description">Alles uit</span>
                 </span>
 	  	  	</div>
-	  	  	
+
 	  	  	<div class="col col-md-2 col-sm-2 col-xs-2">
                 <span class="scene bg-blue" data-domoticz-id="6">
                 	<div class="icon"><i class="fa fa-thumbs-o-up"></i></div>
@@ -297,7 +325,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 	<span class="description">TV kijken</span>
                 </span>
 	  	  	</div>
-	  	  	
+
 	  	  	<div class="col col-md-2 col-sm-2 col-xs-2">
                 <span class="scene bg-red" data-domoticz-id="7">
                 	<div class="icon"><i class="ion ion-flame"></i></div>
@@ -311,10 +339,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 	<span class="description">Verwarming uit</span>
                 </span>
 	  	  	</div>
-	  	  	
-	  	  	
+
+
 	  	  </div>
-	  	  
+
 		  <div class="row">
 		  	<div class="col col-md-4 col-sm-6 col-xs-12">
 			  <div class="box box-primary">
@@ -330,7 +358,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       	<i class="wi wi-day-showers"></i>
                       </div>
                       <div class="weather-item">
-                        <a href="javascript:;" class="product-title">Weer vandaag 
+                        <a href="javascript:;" class="product-title">Weer vandaag
                         	<span class="label label-info pull-right"><span class="temp intTemperature">..</span> &deg;C</span>
                         </a>
                         <span class="product-description">
@@ -356,11 +384,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </li><!-- /.item -->
                   </ul>
                 </div><!-- /.box-body -->
-                
+
 				<div class="overlay loading">
 				  <i class="fa fa-refresh fa-spin"></i>
 				</div>
-              </div>		  	
+              </div>
 		  	</div>
 
 		  	<div class="col col-md-4 hidden-xs hidden-sm">
@@ -401,13 +429,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </li><!-- /.item -->
                   </ul>
                 </div><!-- /.box-body -->
-                
+
 				<div class="overlay loading">
 				  <i class="fa fa-refresh fa-spin"></i>
 				</div>
-              </div>		  	
+              </div>
 		  	</div>
-		  			  
+
 		  	<div class="col col-md-4 col-sm-6 col-xs-12">
 			  <div class="box box-primary">
                 <div class="box-header with-border hidden-xs">
@@ -423,7 +451,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </div>
                       <div class="weather-item">
                         <a href="javascript:;" class="product-title">
-                        	<span class="date">21-07-2015</span> 
+                        	<span class="date">21-07-2015</span>
                         	<span class="label label-danger pull-right"><span class="temp_max">..</span> &deg;C</span>
                         	<span class="label label-info pull-right"><span class="temp_min">..</span> &deg;C</span>
                         </a>
@@ -434,14 +462,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </li><!-- /.item -->
                   </ul>
                 </div><!-- /.box-body -->
-                
+
 				<div class="overlay loading">
 				  <i class="fa fa-refresh fa-spin"></i>
 				</div>
-              </div>		  	
+              </div>
 		  	</div>
-		  			  
-		  			  
+
+
 		  	<div class="col col-md-3 col-sm-12 hidden-xs  hidden-xs hidden-sm hidden-md hidden-lg">
 			  <div class="box box-secondary">
                 <div class="box-header with-border">
@@ -489,18 +517,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="box-footer text-center">
                   <a href="javascript:;" class="uppercase">View all logs</a>
                 </div><!-- /.box-footer -->
-				
+
 				<!-- Overlay is shown to disable element -->
 				<div class="overlay"></div>
-              </div>		  	
-		  	
+              </div>
+
 		  	</div>
 		  </div>
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
-      
-      <!-- Control Sidebar -->      
-      <aside class="control-sidebar control-sidebar-dark">                
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
         <!-- Create the tabs -->
         <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
           <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
@@ -521,7 +549,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p><i class="fa fa-circle text-success"></i> online</p>
                   </div>
                 </a>
-              </li>              
+              </li>
               <li>
                 <a href='javascript:;'>
                   <i class="menu-icon fa fa-refresh bg-red"></i>
@@ -530,7 +558,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p>10 seconds ago</p>
                   </div>
                 </a>
-              </li>              
+              </li>
             </ul><!-- /.control-sidebar-menu -->
 
             <h3 class="control-sidebar-heading">Weer</h3>
@@ -543,14 +571,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p class="lastUpdate">3 minutes ago</p>
                   </div>
                 </a>
-              </li>              
+              </li>
             </ul><!-- /.control-sidebar-menu -->
-            
+
           </div><!-- /.tab-pane -->
           <!-- Stats tab content -->
           <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
           <!-- Settings tab content -->
-          <div class="tab-pane" id="control-sidebar-settings-tab">            
+          <div class="tab-pane" id="control-sidebar-settings-tab">
             <form method="post">
               <h3 class="control-sidebar-heading">General Settings</h3>
               <div class="form-group">
@@ -571,39 +599,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class='control-sidebar-bg'></div>
     </div><!-- ./wrapper -->
 
-    <!-- REQUIRED JS SCRIPTS -->
-
-    <!-- jQuery 2.1.4 -->
-    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <!-- Bootstrap 3.3.2 JS -->
-    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <!-- AdminLTE App -->
-    <script src="dist/js/app.min.js" type="text/javascript"></script>
-
-    <!-- Morris.js charts -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="plugins/morris/morris.min.js" type="text/javascript"></script>
-    
-	<!-- ChartJS 1.0.1 -->
-    <script src="plugins/chartjs/Chart.min.js" type="text/javascript"></script>
-    
-    <!--  Moment.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment-with-locales.min.js" type="text/javascript"></script>
-
-    <!-- Optionally, you can add Slimscroll and FastClick plugins.
-          Both of these plugins are recommended to enhance the
-          user experience. Slimscroll is required when using the
-          fixed layout. -->
-	<script src="plugins/bootstrap-slider/bootstrap-slider.js" type="text/javascript"></script>
-	
-	<!-- Scripts to enable dashboard to be interactive -->
-	<script src="custom/js/dashboard.js" type="text/javascript"></script>
-	<script src="custom/js/settings.js" type="text/javascript"></script>
-	<script src="custom/js/domoticz.js" type="text/javascript"></script>
+    <!-- REQUIRED JS SCRIPTS FOR THE PAGE -->
 	<script src="custom/js/weather.js" type="text/javascript"></script>
 	<script src="custom/js/moon.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		$(function() { Domotica.dashboard.init(); });	
+		$(function() { Domotica.dashboard.init(); });
 	</script>
   </body>
 </html>

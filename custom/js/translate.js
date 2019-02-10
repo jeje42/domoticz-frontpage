@@ -37,6 +37,7 @@ Domotica.translate = {
 				element.innerHTML = tmp
 			}
 		}
+		console.log(element.innerHTML);
 	},
 
 	// Main method for updating the status of all boxes

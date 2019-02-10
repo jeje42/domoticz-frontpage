@@ -17,6 +17,9 @@ Domotica.domoticz = {
 
 		// Handle updates
 		that.call("devices", { plan: Domotica.settings.domoticz.plan }, function(data) {
+			if(!data){
+				return
+			}
 			// For now, only handle 'results' part
 			$.each(data.result, function(idx, result) {
 				var id = result.idx;
